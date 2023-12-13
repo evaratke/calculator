@@ -6,7 +6,7 @@ import math
 #создать окно
 interface=Tk()
 
-interface.geometry("445x170")
+interface.geometry("500x145")
 interface.title("Калькулятор")
 interface.resizable(0, 0)
 
@@ -27,13 +27,13 @@ b=0
 for i in list_of_buttons:
     rel=""
     cmd=lambda x=i: calc(x)
-    ttk.Button(interface, text=i, command = cmd,  width = 15).grid(row=a, column = b)
+    ttk.Button(interface, text=i, command = cmd,  width = 14).grid(row=a, column = b)
     b+=1
     if b>4:
         b=0
         a+=1
 #поле ввода
-calc_entry= Entry(interface,width=33)
+calc_entry= Entry(interface,width=50)
 calc_entry.grid(row=0,column=0,columnspan=5)
 #логика
 def calc(key):
