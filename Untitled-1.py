@@ -2,11 +2,11 @@ from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
 import math
-import sys
+
 #создать окно
 interface=Tk()
 
-interface.geometry("500x180")
+interface.geometry("445x170")
 interface.title("Калькулятор")
 interface.resizable(0, 0)
 
@@ -18,7 +18,7 @@ list_of_buttons=[
 "4", "5", "6", "-", "/",
 "1", "2", "3", "xⁿ",
 "0", ".", "±",  "C",
-"Exit", "π", "sin", "cos",
+ "sin", "cos",
 "(", ")","n!","√2",  "=" ]
 
 #создать кнопоки
@@ -62,11 +62,7 @@ def calc(key):
                 calc_entry.insert(0, "-")
         except IndexError:
             pass
-    elif key == "Exit":
-        interface.after(1,interface.destroy)
-        sys.exit
-    elif key == "π":
-        calc_entry.insert(END, math.pi)
+
     elif key == "xⁿ":
         calc_entry.insert(END, "**")
     elif key == "sin":
