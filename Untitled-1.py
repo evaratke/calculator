@@ -6,7 +6,7 @@ import math
 #создать окно
 interface=Tk()
 
-interface.geometry("500x145")
+interface.geometry("465x145")
 interface.title("Калькулятор")
 interface.resizable(0, 0)
 
